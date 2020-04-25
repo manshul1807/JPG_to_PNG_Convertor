@@ -13,7 +13,7 @@ if not os.path.isdir(converted_folder):
 # loop through pokedex
 
 for filename in os.listdir(current_folder):
-    image = Image.open(filename)
+    image = Image.open(os.path.join(current_folder, filename))
     converted_image = image.copy()
     original_name = os.path.basename(filename)
     converted_name = original_name[:-4]+'.png'
